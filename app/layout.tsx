@@ -4,6 +4,7 @@ import StyledComponentsRegistry from '@/lib/registry';
 import { Providers } from '@/lib/providers';
 import CartDrawer from '@/components/cart/CartDrawer';
 import ThemeToggle from '@/components/ThemeToggle';
+import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
   title: 'Myside',
@@ -31,6 +32,8 @@ export default function RootLayout({
       </head>
       <body>
         <StyledComponentsRegistry>
+        <Toaster position="top-right" />
+
           <Providers>
             {children}
             <CartDrawer />

@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Product } from '@/lib/types/Product';
 import { useCart } from '@/lib/hooks/useCart';
+import { toast } from 'react-hot-toast';
 
 const Card = styled(motion.div)`
   background: white;
@@ -39,7 +40,6 @@ const Title = styled.h2`
   white-space: normal;
 `;
 
-
 const Description = styled.p`
   color: #6b7280;
   font-size: 0.875rem;
@@ -57,8 +57,6 @@ const Price = styled.p`
   margin-bottom: 1rem;
 `;
 
-const AnimatedButton = styled(motion.button)``;
-
 interface ProductCardProps {
   product: Product;
 }
@@ -69,6 +67,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
     addItem(product);
+    toast.success(`${product.title} adicionado ao carrinho!`);
   };
 
   return (

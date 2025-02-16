@@ -177,7 +177,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             <Link href="/" passHref>
               <Button>
                 <ArrowLeft style={{ marginRight: '0.5rem' }} />
-                Back to Home
+                Voltar
               </Button>
             </Link>
           </div>
