@@ -1,30 +1,10 @@
 'use client';
 
-import {
-  ShoppingCart,
-  Facebook,
-  Instagram,
-  Twitter,
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  HelpCircle,
-  FileText,
-  Shield,
-  Users,
-  Heart,
-  Leaf
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-import Link from 'next/link';
 import styled from 'styled-components';
 import useProducts from '@/lib/hooks/useProducts';
 import ProductList from '@/components/product/ProductList';
 import SearchFilters from '@/components/SearchFilters';
 import Pagination from '@/components/Pagination';
-import { useCart } from '@/lib/hooks/useCart';
 import { useEffect, useState } from 'react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -49,8 +29,6 @@ const MainContent = styled.div`
     padding: 2rem;
   }
 `;
-
-
 
 
 export default function Home() {
