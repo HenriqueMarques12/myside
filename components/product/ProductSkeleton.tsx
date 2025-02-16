@@ -8,6 +8,11 @@ const SkeletonCard = styled(motion.div)`
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 `;
 
 const SkeletonContainer = styled.div`
@@ -18,45 +23,51 @@ const SkeletonContainer = styled.div`
       opacity: 1;
     }
     50% {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 `;
 
 const ImageSkeleton = styled.div`
-  height: 250px;
+  width: 100%;
+  height: 200px;
   background: ${props => props.theme.muted};
+  border-radius: 0.5rem;
 `;
 
 const ContentSkeleton = styled.div`
-  padding: 1.5rem;
+  width: 100%;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.75rem;
 `;
 
 const TitleSkeleton = styled.div`
-  height: 24px;
+  height: 20px;
+  width: 80%;
   background: ${props => props.theme.muted};
   border-radius: 0.25rem;
-  width: 80%;
 `;
 
 const DescriptionSkeleton = styled.div`
-  height: 40px;
+  height: 32px;
+  width: 90%;
   background: ${props => props.theme.muted};
   border-radius: 0.25rem;
 `;
 
 const PriceSkeleton = styled.div`
-  height: 32px;
+  height: 24px;
+  width: 50%;
   background: ${props => props.theme.muted};
   border-radius: 0.25rem;
-  width: 40%;
 `;
 
 const ButtonSkeleton = styled.div`
   height: 40px;
+  width: 100%;
   background: ${props => props.theme.muted};
   border-radius: 0.25rem;
   margin-top: 0.5rem;
@@ -69,7 +80,7 @@ const item = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut"
+      ease: 'easeOut'
     }
   }
 };
