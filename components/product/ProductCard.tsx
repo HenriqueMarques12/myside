@@ -32,10 +32,13 @@ const Title = styled.h2`
   color: #111;
   margin-bottom: 0.5rem;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 `;
+
 
 const Description = styled.p`
   color: #6b7280;
