@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 const ToggleButton = styled(Button)`
   position: fixed;
   bottom: 2rem;
-  right: 2rem;
+  left: 2rem;
   z-index: 50;
   border-radius: 9999px;
   padding: 0.75rem;
